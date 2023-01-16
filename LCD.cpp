@@ -1,3 +1,5 @@
+/* It lacks a lot of feature though but i write it for fun :)))*/
+
 #include "LCD.hpp"
 #include<stdint.h>
 #include<Arduino.h>
