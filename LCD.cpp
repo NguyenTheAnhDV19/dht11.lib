@@ -1,4 +1,9 @@
-/* It lacks a lot of feature though but i write it for fun :)))*/
+/* 
+It lacks a lot of feature though but i write it for fun :)))
+Note that this library is written based on LiquidCrystle_I2C
+The link to the datasheet of HD448780:
+	https://html.alldatasheet.com/html-pdf/63673/HITACHI/HD44780/11541/46/HD44780.html
+*/
 
 #include "LCD.hpp"
 #include<stdint.h>
@@ -87,7 +92,7 @@ void LCD::write_bit(uint8_t value)
 void LCD::send(uint8_t value,bool mode)
 {
   uint8_t highnib=value&0xf0;
-	uint8_t lownib=(value<<4)&0xf0;
-	write_bit((highnib)|mode);
-	write_bit((lownib)|mode);
+  uint8_t lownib=(value<<4)&0xf0;
+  write_bit((highnib)|mode);
+  write_bit((lownib)|mode);
 }
