@@ -1,6 +1,6 @@
 /* 
-It lacks a lot of feature though but i write it for fun :)))
-Note that this library is written based on LiquidCrystle_I2C
+It lacks a lot of feature though but i write it for fun so anyway :)))
+Note that this library was written based on LiquidCrystle_I2C library on GITHUB 
 The link to the datasheet of HD448780:
 	https://html.alldatasheet.com/html-pdf/63673/HITACHI/HD44780/11541/46/HD44780.html
 */
