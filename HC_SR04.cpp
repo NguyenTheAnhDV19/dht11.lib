@@ -1,3 +1,9 @@
+/*
+The output is in cm measurement 
+Link to the sensor HC_SR04 datasheet:
+  file:///E:/Books/TECHNICAL/HC-SR04-HandsOn.pdf
+*/
+
 #include "HC_SR04.hpp"
 #include<Arduino.h>
 #include<stdint.h>
