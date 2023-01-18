@@ -12,6 +12,7 @@ class SR04{
 
   public:
     SR04(uint8_t _trigger, uint8_t _echo);
+    ~SR04();
     void init();
     float result();
     void get_data();
