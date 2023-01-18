@@ -2,9 +2,9 @@
 #include<Arduino.h>
 
 DHT11::DHT11(int pin)
-{
-    _pin = pin;
-}
+: pin(_pin) {}
+
+DHT11::~DHT11{~pin;}
 
 void DHT11::get_data(){
   //init here
