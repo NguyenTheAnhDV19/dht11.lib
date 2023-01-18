@@ -85,18 +85,18 @@ void LCD::command(uint8_t value)
 void LCD::write_bit(uint8_t value)
 {
   Wire.beginTransmission(address);
-  Wire.write(value| 0x04);
+  Wire.write((int)(value |0x08));
+  Wire.endTransmission();
+	
+  Wire.beginTransmission(address);
+  Wire.write(value| 0x04 | 0x08);
   Wire.endTransmission();
   delayMicroseconds(1);
 
   Wire.beginTransmission(address);
-  Wire.write(value &~0x04);
+  Wire.write(value &~0x04 | 0x08);
   Wire.endTransmission();
   delayMicroseconds(50);
-
-  Wire.beginTransmission(address);
-  Wire.write((int)(value |0x08));
-  Wire.endTransmission();
 
 }
 
