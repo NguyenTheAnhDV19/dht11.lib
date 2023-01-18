@@ -14,6 +14,7 @@ private:
 
 public:
   LCD(uint8_t _address);
+   ~LCD();
   void init();
   void print(String s);
   void print_number(int number);
