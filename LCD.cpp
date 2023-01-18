@@ -13,6 +13,11 @@ The link to the datasheet of HD448780:
 LCD::LCD(uint8_t _address)
 : address(_address) {};
 
+LCD::~LCD()
+{
+    ~address;
+}
+
 void LCD::init()
 {
   Wire.begin();
