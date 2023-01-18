@@ -13,6 +13,7 @@ private:
 
 public:
   DHT11(int pin);
+  ~DHT11();
   void get_data();
   float get_temperature(bool C);
   int get_humidity();
