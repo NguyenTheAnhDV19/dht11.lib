@@ -1,3 +1,8 @@
+/*
+  link to the DHT11 datasheet:
+    https://html.alldatasheet.com/html-pdf/1440068/ETC/DHT11/395/6/DHT11.html
+*/
+
 #include "DHT11.hpp"
 #include<Arduino.h>
 
