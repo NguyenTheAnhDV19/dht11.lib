@@ -11,6 +11,12 @@ Link to the sensor HC_SR04 datasheet:
 SR04::SR04(uint8_t _trigger, uint8_t _echo)
 :trigger(_trigger), echo(_echo) {}
 
+SR04::~SR04()
+{
+    ~trigger;
+    ~echo;
+}
+
 void SR04::init()
 {
   pinMode(trigger,OUTPUT);
