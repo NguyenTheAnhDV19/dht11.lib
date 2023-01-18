@@ -29,11 +29,10 @@ void LCD::init()
   write_bit(0x03<<4);
   delayMicroseconds(150);
   home();
-  off();
+  command(0x04);
   clear();
+  command(0x28 | 0x06);
   on();
-  command(0x38);
-  delay(50);
 }
 
 void LCD::off()
@@ -56,11 +55,7 @@ void LCD::home()
 
 void LCD::setCursor(uint8_t row, uint8_t column)
 {
-  if(row == 1){
-    command(0x80 | row);
-  }else{
-    command(0xC0 | row);
-  }
+  !row ? (command(0x80|column)) : (command(0xC0 | column));
 }
 
 void LCD::clear()
@@ -90,8 +85,19 @@ void LCD::command(uint8_t value)
 void LCD::write_bit(uint8_t value)
 {
   Wire.beginTransmission(address);
-  Wire.write(value);
+  Wire.write(value| 0x04);
   Wire.endTransmission();
+  delayMicroseconds(1);
+
+  Wire.beginTransmission(address);
+  Wire.write(value &~0x04);
+  Wire.endTransmission();
+  delayMicroseconds(50);
+
+  Wire.beginTransmission(address);
+  Wire.write((int)(value |0x08));
+  Wire.endTransmission();
+
 }
 
 void LCD::send(uint8_t value,bool mode)
