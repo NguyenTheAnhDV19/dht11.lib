@@ -7,7 +7,10 @@ class Timer
 {
   public:
     String getTime();
-    void init();
+    String countDown();
+    String convertCountDown(int time1, int time2);
+    void init(String countTime);
+    bool checkTimeOut();
     void resetSeconds();
     void resetMinutes();
     void resetHours();
@@ -19,6 +22,7 @@ class Timer
   private:
     int hours,minutes;
     unsigned long seconds,time;
+    int hoursCount,minutesCount,secondsCount;
     void getSeconds();
     void getMinutes();
     void getHours();
@@ -26,7 +30,7 @@ class Timer
     String currentMinutes();
     String currentSeconds();
     String convert(int number);
-
 };
 
 #endif
+
