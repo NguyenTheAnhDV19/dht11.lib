@@ -9,7 +9,7 @@
 DHT11::DHT11(int pin)
 : pin(_pin) {}
 
-DHT11::~DHT11{~pin;}
+DHT11::~DHT11(){~_pin;}
 
 void DHT11::get_data(){
   //init here
