@@ -21,7 +21,7 @@ class Timer
     void stop();
   
   private:
-    int hours,minutes;
+    int hours,minutes,increaseSeconds;
     unsigned long seconds,time;
     int hoursCount,minutesCount,secondsCount;
     void getSeconds();
