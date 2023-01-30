@@ -77,6 +77,7 @@ void Timer::init(String countTime)
 
 void Timer:: resetSeconds()
 {
+    getSeconds();
     time +=seconds;
     seconds =0;
 }
