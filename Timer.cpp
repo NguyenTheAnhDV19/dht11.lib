@@ -27,6 +27,7 @@ String Timer::currentSeconds()
 void Timer::getSeconds()
 {
   seconds = millis()/1000 - time;
+  seconds = millis()/1000 - time;
 }
 
 void Timer::getMinutes()
