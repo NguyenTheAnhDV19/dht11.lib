@@ -8,7 +8,6 @@ class Timer
   public:
     String getTime();
     String countDown();
-    String convertCountDown(int time1, int time2);
     void init(String countTime);
     bool checkTimeOut();
     void resetSeconds();
@@ -31,6 +30,7 @@ class Timer
     String currentMinutes();
     String currentSeconds();
     String convert(int number);
+    String convertCountDown(int time1, int time2);
 };
 
 #endif
