@@ -17,7 +17,6 @@ class Timer
     int second();
     int minute();
     int hour();
-    void stop();
   
   private:
     int hours,minutes,increaseSeconds;
