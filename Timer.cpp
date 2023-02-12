@@ -140,8 +140,3 @@ bool Timer::checkTimeOut()
     if(hoursCount == hours && minutesCount == minutes && secondsCount == seconds) return true;
     return false;
 }
-
-void Timer::stop()
-{
-    time += increaseSeconds;
-}
