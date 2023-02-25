@@ -47,7 +47,7 @@ void LCD::home()
 
 void LCD::setCursor(uint8_t row, uint8_t column)
 {
-  !row ? (command(0x80|row)) : (command(0xC0 | column));
+  !row ? (command(0x80|column)) : (command(0xC0 | column));
 }
 
 void LCD::clear()
